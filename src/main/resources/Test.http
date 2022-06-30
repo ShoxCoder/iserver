@@ -1,0 +1,8 @@
+POST http://localhost:8080/api/sms
+Content-Type: application/json
+
+{
+  "phoneNumber": "+998977174433"
+}
+
+###
