@@ -34,7 +34,7 @@ public class RegionService {
 
     public ApiResponse updateRegion(RegionDto regionDto, Integer id) {
         Optional<Region> optionalRegion = regionRepository.findById(id);
-        if (optionalRegion.isEmpty()) {
+        if (!optionalRegion.isPresent()) {
             return new ApiResponse("Bunday Region topilmadi", false, null);
         }
         Region region = optionalRegion.get();
@@ -45,7 +45,7 @@ public class RegionService {
 
     public ApiResponse getRegionById(Integer id) {
         Optional<Region> optionalRegion = regionRepository.findById(id);
-        if (optionalRegion.isEmpty()) {
+        if (!optionalRegion.isPresent()) {
             return new ApiResponse("Bunday Region topilmadi", false, null);
         }
         return new ApiResponse("Ok", true, optionalRegion.get());
@@ -53,7 +53,7 @@ public class RegionService {
 
     public ApiResponse deleteRegion(Integer id) {
         Optional<Region> optionalRegion = regionRepository.findById(id);
-        if (optionalRegion.isEmpty()) {
+        if (!optionalRegion.isPresent()) {
             return new ApiResponse("Bunday Region topilmadi", false, null);
         }
         regionRepository.deleteById(id);

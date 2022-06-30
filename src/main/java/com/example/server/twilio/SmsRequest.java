@@ -8,7 +8,7 @@ import javax.validation.constraints.NotBlank;
 
 @Setter
 @Getter
-public class SmsRequest {
+public class  SmsRequest {
 
     @NotBlank
     private final String phoneNumber;
