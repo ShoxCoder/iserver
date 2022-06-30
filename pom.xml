@@ -83,8 +83,6 @@
                             <artifactId>lombok</artifactId>
                         </exclude>
                     </excludes>
-                        <sourse>1.8</sourse>
-                        <target>1.8</target>
                 </configuration>
             </plugin>
         </plugins>
