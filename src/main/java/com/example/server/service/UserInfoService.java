@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
+
 import java.util.List;
 import java.util.Optional;
 
@@ -25,6 +26,7 @@ public class UserInfoService {
     AttachmentRepository attachmentRepository;
 
 
+
     public ApiResponse saveUser(UserInfoDto userDTO) {
         UserInfo addUser = new UserInfo();
      if(!userRepository.existsByPhoneNumber(userDTO.getPhoneNumber())){
@@ -33,7 +35,7 @@ public class UserInfoService {
 
          addUser.setLocation(byId.get());
 
-         addUser.setFirstName(userDTO.getFirstName());
+         addUser.setFirstName( userDTO.getFirstName());
          addUser.setLastName(userDTO.getLastName());
          addUser.setAge(userDTO.getAge());
          addUser.setJShir(userDTO.getJShir());

@@ -25,6 +25,7 @@ public class UserInfo {
 
     String lastName;
 
+    @Column(nullable = false)
     String phoneNumber;
 
     Integer age;

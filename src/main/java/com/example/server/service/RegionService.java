@@ -45,10 +45,10 @@ public class RegionService {
 
     public ApiResponse getRegionById(Integer id) {
         Optional<Region> optionalRegion = regionRepository.findById(id);
-        if (!optionalRegion.isPresent()) {
-            return new ApiResponse("Bunday Region topilmadi", false, null);
+        if (optionalRegion.isPresent()) {
+            return new ApiResponse("Ok", true, optionalRegion.get());
         }
-        return new ApiResponse("Ok", true, optionalRegion.get());
+        return new ApiResponse("Fack", false);
     }
 
     public ApiResponse deleteRegion(Integer id) {

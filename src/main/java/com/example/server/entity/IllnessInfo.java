@@ -31,9 +31,7 @@ public class IllnessInfo {
     private String info6;
     private String info7;
     private String info8;
-
-    @OneToOne
-    private Attachment photo;
+    private String photoUrl;
 
 
 

@@ -20,6 +20,7 @@ public class IllnessInfoService {
         IllnessInfo info=new IllnessInfo();
         if(!illnessInfoRepository.existsByIllnessName(illnessDto.getIllnessName())){
 
+            info.setIllnessName(illnessDto.getIllnessName());
             info.setInfo1(illnessDto.getInfo1());
             info.setInfo2(illnessDto.getInfo2());
             info.setInfo3(illnessDto.getInfo3());
@@ -28,6 +29,7 @@ public class IllnessInfoService {
             info.setInfo6(illnessDto.getInfo6());
             info.setInfo7(illnessDto.getInfo7());
             info.setInfo8(illnessDto.getInfo8());
+            info.setPhotoUrl(illnessDto.getPhotoUrl());
 
 
             illnessInfoRepository.save(info);
@@ -65,6 +67,7 @@ public class IllnessInfoService {
             info.setInfo6(illnessInfoDto.getInfo6());
             info.setInfo7(illnessInfoDto.getInfo7());
             info.setInfo8(illnessInfoDto.getInfo8());
+            info.setPhotoUrl(illnessInfoDto.getPhotoUrl());
 
             illnessInfoRepository.save(info);
 

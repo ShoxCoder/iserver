@@ -17,5 +17,5 @@ public class IllnessInfoDto {
     private String info6;
     private String info7;
     private String info8;
-    private Integer photoId;
+    private String photoUrl;
 }
