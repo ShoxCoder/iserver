@@ -1,8 +1,12 @@
-POST http://localhost:8080/api/sms
+POST http://localhost:8080/api/illness
 Content-Type: application/json
 
 {
-  "phoneNumber": "+998934257117"
+  "illnessName": "Stroke",
+  "photoUrl": "https://bfmcms.s3.amazonaws.com/websiteimages/HealthLiving-2020-11-02_BPHL_StrokeintheOlderPerson1_Image.jpg",
+  "info1": "Yuzning bir tomonida zaiflik bormi? Ikkala qo'lni ko'tara oladimi? Ularning nutqi oson tushuniladimi?",
+  "info2": "Tezda 103 ga qo'ng'iroq qiling yoki bu ishni qiladigan boshqa inson toping.",
+  "info3": "Tez yordam yetib kelgunicha insonni gapga solib turing."
 }
 
 ###
